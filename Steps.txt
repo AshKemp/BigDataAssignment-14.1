@@ -1,0 +1,20 @@
+// Creating database
+
+create database custom;
+
+// Creating table
+
+create table temperature_data (
+date string,
+zip_code int,
+temperature int
+)
+
+// Specifying delimiter
+
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+// Loading dataset into table
+
+LOAD DATA LOCAL INPATH '/home/acadgild/hive/dataset.txt' INTO TABLE temperature_data;
+
